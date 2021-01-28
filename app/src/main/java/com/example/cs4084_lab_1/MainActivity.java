@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void sendMessage (View view) { //View - standard AS class for anything visual
+    public void sendMessage (View view) { // view - standard AS class for anything visual
         //code for button that sends message
-        EditText editText = (EditText) findViewById(R.id.editText); //finds our editText key
+        EditText editText = findViewById(R.id.editText); // finds our editText key
         String message = editText.getText().toString();
-        Intent intent = new Intent(this, DisplayMessageActivity.class); //the way you send info between different activities
+        Intent intent = new Intent(this, DisplayMessageActivity.class); // the way you send info between different activities
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
