@@ -26,8 +26,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="28dp"
         android:ems="10"
+        android:hint="Type your Message"
         android:inputType="textPersonName"
-        android:text="Type your Message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

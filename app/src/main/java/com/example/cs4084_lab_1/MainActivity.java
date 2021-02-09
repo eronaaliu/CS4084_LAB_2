@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,14 +16,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(MainActivity.this, "Firebase connected", Toast.LENGTH_LONG).show();
     }
 
     public void sendMessage (View view) { // view - standard AS class for anything visual
         //code for button that sends message
-        EditText editText = findViewById(R.id.editText); // finds our editText key
+        EditText editText = (EditText) findViewById(R.id.editText); // finds our editText key
         String message = editText.getText().toString();
         Intent intent = new Intent(this, DisplayMessageActivity.class); // the way you send info between different activities
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+
     }
+
 }
